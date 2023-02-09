@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Sydney Ecommerce Theme`,
+    title: `Gurufa Games`,
     siteUrl: `https://jamm.matter.design`,
   },
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Sydney Ecommerce Theme`,
-        short_name: `Sydney`,
+        name: `Gurufa Games`,
+        short_name: `Gurufa Games`,
         start_url: `/`,
         background_color: `#000000`,
         theme_color: `#ffffff`,
