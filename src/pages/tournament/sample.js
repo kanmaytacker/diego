@@ -93,17 +93,17 @@ const ProductPage = (props) => {
                   customStyle={styles}
                   title={'Rules & Regulations'}
                 >
-                  <p className={styles.information}>{tournament.description}</p>
+                  <p className={styles.information}>{tournament.metadata.description}</p>
                 </Accordion>
                 <Accordion
                   type={'plus'}
                   customStyle={styles}
                   title={'Terms & Conditions'}
                 >
-                  <p className={styles.information}>{tournament.description}</p>
+                  <p className={styles.information}>{tournament.metadata.description}</p>
                 </Accordion>
                 <Accordion type={'plus'} customStyle={styles} title={'Help'}>
-                  <p className={styles.information}>{tournament.description}</p>
+                  <p className={styles.information}>{tournament.metadata.description}</p>
                 </Accordion>
               </div>
             </div>
