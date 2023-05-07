@@ -1,6 +1,10 @@
 .root {
     margin-top: 20px;
-    padding: 32px;
+    padding: 0px 32px 0px 32px;
+}
+
+.title {
+    margin-bottom: 32px;
 }
 
 .content {
@@ -109,7 +113,6 @@
 }
 
 .description {
-    margin-top: 40px;
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;

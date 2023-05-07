@@ -1,17 +1,11 @@
-import React, { useState, useEffect, createRef } from 'react';
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
+import React, { createRef, useEffect, useState } from 'react';
 
-import { isAuth } from '../../helpers/general';
-
-import AddNotification from '../AddNotification';
 import Brand from '../Brand';
 import Container from '../Container';
-import Config from '../../config.json';
 import Drawer from '../Drawer';
-import ExpandedMenu from '../ExpandedMenu';
 import FormInputField from '../FormInputField/FormInputField';
 import Icon from '../Icons/Icon';
-import MiniCart from '../MiniCart';
 import MobileNavigation from '../MobileNavigation';
 import * as styles from './Header.module.css';
 
@@ -28,11 +22,7 @@ const Header = (prop) => {
 
   const searchRef = createRef();
   const bannerMessage = 'Join competitions for free';
-  const searchSuggestions = [
-    'Football',
-    'Cricket',
-    'Badminton',
-  ];
+  const searchSuggestions = ['Football', 'Cricket', 'Badminton'];
 
   const handleHover = (navObject) => {
     if (navObject.category) {

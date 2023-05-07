@@ -22,21 +22,26 @@ const ProductPage = (props) => {
     <Layout>
       <div className={styles.root}>
         <Container size={'large'} spacing={'min'}>
+          <div className={styles.title}>
+            <h1>{sampleTournament.name}</h1>
+            <span className={styles.location}>{sampleTournament.city}</span>
+          </div>
           <div className={styles.content}>
             <div className={styles.gallery}>
               <Gallery images={sampleTournament.gallery} />
             </div>
             <div className={styles.details}>
-              <h1>{sampleTournament.name}</h1>
-              <span className={styles.location}>{sampleTournament.city}</span>
-
               <div className={styles.description}>
                 <p>{sampleTournament.description}</p>
               </div>
 
               <div className={styles.priceContainer}>
                 <span className={styles.priceLabel}>You can win</span>
-                <CurrencyFormatter appendZero amount={sampleTournament.entry} currency='INR'/>
+                <CurrencyFormatter
+                  appendZero
+                  amount={sampleTournament.winnings}
+                  currency="INR"
+                />
               </div>
 
               <div className={styles.actionContainer}>
