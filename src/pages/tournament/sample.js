@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import * as styles from './sample.module.css';
 
 import Accordion from '../../components/Accordion';
@@ -7,17 +7,19 @@ import Container from '../../components/Container';
 import CurrencyFormatter from '../../components/CurrencyFormatter';
 import Gallery from '../../components/Gallery';
 import Layout from '../../components/Layout/Layout';
+import MiniCart from '../../components/MiniCart';
 
 import Icon from '../../components/Icons/Icon';
 import { generateMockTournamentsData } from '../../helpers/mock';
 
 import AddItemNotificationContext from '../../context/AddItemNotificationProvider';
+import Drawer from '../../components/Drawer/Drawer';
 
 const ProductPage = (props) => {
   const ctxAddItemNotification = useContext(AddItemNotificationContext);
   const showNotification = ctxAddItemNotification.showNotification;
   const sampleTournament = generateMockTournamentsData(1)[0];
-
+  const [showRegister, setShowRegister] = useState(false);
   return (
     <Layout>
       <div className={styles.root}>
@@ -47,7 +49,7 @@ const ProductPage = (props) => {
               <div className={styles.actionContainer}>
                 <div className={styles.addToButtonContainer}>
                   <Button
-                    onClick={() => showNotification()}
+                    onClick={() => setShowRegister(true)}
                     fullWidth
                     level={'primary'}
                   >
@@ -91,6 +93,9 @@ const ProductPage = (props) => {
           </div>
         </Container>
       </div>
+      <Drawer visible={showRegister} close={() => setShowRegister(false)}>
+        <MiniCart />
+      </Drawer>{' '}
     </Layout>
   );
 };

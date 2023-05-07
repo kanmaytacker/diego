@@ -18,12 +18,9 @@
 
 .cartItemsContainer {
     margin: 0px 16px 16px 16px;
-    overflow-y: auto;
-    height: 65%;
 }
 
 .cartItemsContainer > div {
-    margin-bottom: 16px;
 }
 
 .summaryContainer {
