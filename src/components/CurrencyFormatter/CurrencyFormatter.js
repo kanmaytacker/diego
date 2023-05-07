@@ -23,7 +23,7 @@ const CurrencyFormatter = ({
     style: 'currency',
     currency,
   });
-  let symbol = '$';
+  let symbol = '$'; // Ruppe symbol is : ₹
   let formattedPrice = formatObject.format(displayAmount);
   if ('formatToParts' in formatObject) {
     const formattedPriceParts = formatObject.formatToParts(displayAmount);
@@ -44,10 +44,10 @@ const CurrencyFormatter = ({
   }
 
   const priceComponent = (
-    <>
+    <div>
       <span>{symbol}</span>
       <span>{formattedPrice}</span>
-    </>
+    </div>
   );
 
   return isNumeric(amount) ? priceComponent : 'No price available';

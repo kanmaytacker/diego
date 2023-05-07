@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Vajra-Mushti 6v6 tournament",
+        "date": "2019-12-12",
+        "time": "12:00",
+        "city": "Kolkata",
+        "winnings": "Rs. 5000",
+        "entry": 500,
+        "description": "Experience the perfect blend of traditional Bengali martial arts and modern football at the Vajra-Mushti 6v6 Tournament Football Tournament hosted in Kolkata. Teams of six players will compete against each other with quick reflexes, agility, and strength in a fast-paced, action-packed tournament. The tournament will be held over several days, with the top teams competing in the final rounds for the prestigious Vajra-Mushti 6v6 Tournament Football Trophy and other exciting prizes. Join us for a fun-filled and unforgettable experience of Vajra-Mushti and football in Kolkata!",
+        "gallery": [
+            {"image": "https://playo.gumlet.io/IMPETUSBANGALOREFOOTBALLSTADIUM/BangaloreFootballStadiumImpetusSports9.jpg?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright", "alt": "pdp description 1"},
+            {"image": "https://playo.gumlet.io/SPORTSALLEY/SouthUnitedFootballClub1642749277240.JPG?w=700&format=webp&q=30&overlay=https://playo-website.gumlet.io/playo-website-v2/logos-icons/playo-logo.png&overlay_width_pct=0.2&overlay_height_pct=1&overlay_position=bottomright", "alt": "pdp description 2"}
+        ]
+    }
+]

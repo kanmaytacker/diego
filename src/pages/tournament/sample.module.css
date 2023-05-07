@@ -1,5 +1,6 @@
 .root {
-    margin-top: 16px;
+    margin-top: 20px;
+    padding: 32px;
 }
 
 .content {
@@ -28,6 +29,8 @@
 
 .priceContainer {
     margin: 32px 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 .priceContainer span {
@@ -36,7 +39,12 @@
     line-height: 29px;
 }
 
-.vendor {
+.priceContainer .priceLabel {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.location {
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
