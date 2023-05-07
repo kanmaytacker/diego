@@ -1,38 +1,25 @@
-import React, { useState } from 'react';
 import { navigate } from 'gatsby';
-import * as styles from './address.module.css';
+import React, { useState } from 'react';
+import * as styles from './players.module.css';
 
 import AccountLayout from '../../components/AccountLayout';
 import AddressCard from '../../components/AddressCard';
 import AddressForm from '../../components/AddressForm';
-import Breadcrumbs from '../../components/Breadcrumbs';
 import Icon from '../../components/Icons/Icon';
 import Layout from '../../components/Layout/Layout';
 import Modal from '../../components/Modal';
 
-import { isAuth } from '../../helpers/general';
 import Button from '../../components/Button';
+import { isAuth } from '../../helpers/general';
 
 const AddressPage = (props) => {
-  const address1 = {
+  const player = {
     name: 'John Doe',
-    address: '123 Steam Mill Lane, Haymerket',
-    state: 'NSW',
-    postal: '2000',
-    country: 'Australia',
-    company: '',
+    isCaptain: true,
+    email: 'john@email.com'
   };
 
-  const address2 = {
-    name: 'John Doe',
-    address: '123 Steam Mill Lane, Haymerket',
-    state: 'NSW',
-    postal: '2000',
-    country: 'Australia',
-    company: 'Matter Design',
-  };
-
-  const [addressList] = useState([address1, address2]);
+  const [players] = useState(Array(5).fill(player));
   const [showForm, setShowForm] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
 
@@ -43,23 +30,16 @@ const AddressPage = (props) => {
   return (
     <Layout>
       <AccountLayout>
-        <Breadcrumbs
-          crumbs={[
-            { link: '/', label: 'Home' },
-            { link: '/account', label: 'Account' },
-            { link: '/account/address', label: 'Addresses' },
-          ]}
-        />
-        <h1>Addresses</h1>
+        <h1>Players</h1>
 
         {showForm === false && (
           <div className={styles.addressListContainer}>
-            {addressList.map((address) => {
+            {players.map((player) => {
               return (
                 <AddressCard
                   showForm={() => setShowForm(true)}
                   showDeleteForm={() => setShowDelete(true)}
-                  {...address}
+                  {...player}
                 />
               );
             })}
@@ -69,7 +49,7 @@ const AddressPage = (props) => {
               onClick={() => setShowForm(true)}
             >
               <Icon symbol={'plus'}></Icon>
-              <span>new address</span>
+              <span>new player</span>
             </div>
           </div>
         )}
@@ -77,7 +57,6 @@ const AddressPage = (props) => {
         {showForm === true && (
           <AddressForm closeForm={() => setShowForm(false)} />
         )}
-      </AccountLayout>
       <Modal visible={showDelete} close={() => setShowDelete(false)}>
         <div className={styles.confirmDeleteContainer}>
           <h4>Delete Address?</h4>
@@ -95,6 +74,7 @@ const AddressPage = (props) => {
           </div>
         </div>
       </Modal>
+      </AccountLayout>
     </Layout>
   );
 };

@@ -25,6 +25,8 @@ const Layout = ({ props, children, disablePaddingBottom = false }) => {
           charset="UTF-8"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
         />
+        <script src="https://sdk.cashfree.com/js/ui/2.0.0/cashfree.sandbox.js"></script>
+
       </Helmet>
 
       <Header />

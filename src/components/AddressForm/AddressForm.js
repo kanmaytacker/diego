@@ -3,26 +3,23 @@ import * as styles from './AddressForm.module.css';
 
 import Button from '../Button';
 import FormInputField from '../FormInputField';
+import Checkbox from '../Checkbox/Checkbox';
 
 const AddressForm = (props) => {
   const { closeForm } = props;
 
   const initialState = {
     name: '',
-    address: '',
-    state: '',
-    postal: '',
-    country: '',
-    company: '',
+    isCaptain: false,
+    isViceCaptain: false,
+    email: '',
   };
 
   const errorState = {
     name: '',
-    address: '',
-    state: '',
-    postal: '',
-    country: '',
-    company: '',
+    isCaptain: false,
+    isViceCaptain: false,
+    email: '',
   };
 
   const [form, setForm] = useState(initialState);
@@ -33,6 +30,16 @@ const AddressForm = (props) => {
     setForm(tempForm);
   };
 
+  const setCaptain = (e) => {
+    const tempForm = { ...form, isCaptain: e };
+    setForm(tempForm);
+  };
+
+  const setViceCaptain = (e) => {
+    const tempForm = { ...form, isViceCaptain: e };
+    setForm(tempForm);
+  };
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrorForm(errorState);
@@ -51,44 +58,24 @@ const AddressForm = (props) => {
           error={errorForm.name}
         />
         <FormInputField
-          id={'address'}
-          value={form.address}
+          id={'email'}
+          value={form.email}
           handleChange={(id, e) => handleChange(id, e)}
-          type={'input'}
-          labelName={'Address'}
-          error={errorForm.address}
+          type={'email'}
+          labelName={'Email'}
+          error={errorForm.email}
         />
-        <FormInputField
-          id={'country'}
-          value={form.country}
-          handleChange={(id, e) => handleChange(id, e)}
-          type={'input'}
-          labelName={'Country'}
-          error={errorForm.country}
+        <Checkbox
+          action={(e) => setCaptain(e)}
+          label="Captain"
+          value={form.isCaptain}
+          isChecked={form.isCaptain}
         />
-        <FormInputField
-          id={'state'}
-          value={form.state}
-          handleChange={(id, e) => handleChange(id, e)}
-          type={'input'}
-          labelName={'State'}
-          error={errorForm.state}
-        />
-        <FormInputField
-          id={'postal'}
-          value={form.postal}
-          handleChange={(id, e) => handleChange(id, e)}
-          type={'number'}
-          labelName={'Postal Code'}
-          error={errorForm.postal}
-        />
-        <FormInputField
-          id={'address'}
-          value={form.address}
-          handleChange={(id, e) => handleChange(id, e)}
-          type={'input'}
-          labelName={'Street'}
-          error={errorForm.address}
+        <Checkbox
+          action={(e) => setViceCaptain(e)}
+          label="Vice Captain"
+          value={form.isViceCaptain}
+          isChecked={form.isViceCaptain}
         />
         <div className={styles.actionContainers}>
           <Button fullWidth type={'submit'} level={'primary'}>

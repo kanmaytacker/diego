@@ -1,28 +1,16 @@
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
 import React, { useState } from 'react';
 
 import Button from '../Button';
 import CurrencyFormatter from '../CurrencyFormatter';
-import MiniCartItem from '../MiniCartItem';
 
-import * as styles from './MiniCart.module.css';
-import SignupPage from '../../pages/signup';
 import {
-  isEmpty,
-  validateEmail,
-  validateStrongPassword,
+  isEmpty
 } from '../../helpers/general';
 import FormInputField from '../FormInputField/FormInputField';
+import * as styles from './MiniCart.module.css';
 
 const MiniCart = (props) => {
-  const sampleCartItem = {
-    image: '/products/pdp1.jpeg',
-    alt: '',
-    name: 'Lambswool Crew Neck Jumper',
-    price: 220,
-    color: 'Anthracite Melange',
-    size: 'xs',
-  };
 
   const initialState = {
     teamName: '',
@@ -42,34 +30,46 @@ const MiniCart = (props) => {
   const [errorForm, setErrorForm] = useState(errorState);
 
   const handleChange = (id, e) => {
+    console.log('id', e);
     const tempForm = { ...signupForm, [id]: e };
     setSignupForm(tempForm);
   };
+  
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let validForm = true;
     const tempError = { ...errorState };
 
     if (isEmpty(signupForm.teamName) === true) {
-      tempError.firstName = 'Field required';
+      tempError.teamName = 'Field required';
       validForm = false;
     }
 
-    if (isEmpty(signupForm.contactPhone) === true) {
-      tempError.lastName = 'Field required';
-      validForm = false;
-    }
+    // if (isEmpty(signupForm.contactPhone) === true) {
+    //   tempError.contactPhone = 'Field required';
+    //   validForm = false;
+    // }
 
-    if (validateEmail(signupForm.contactEmail) !== true) {
-      tempError.email =
-        'Please use a valid email address, such as user@example.com.';
-      validForm = false;
-    }
+    // if (validateEmail(signupForm.contactEmail) !== true) {
+    //   tempError.contactEmail =
+    //     'Please use a valid email address, such as user@example.com.';
+    //   validForm = false;
+    // }
 
+    console.log('validForm', validForm);
     if (validForm === true) {
+      
+      // const { data, error } = await supabase.from('team').insert([{
+      //   name: signupForm.teamName
+      // }]);
+
+      // if (error) {
+      //   console.log('error', error);
+      //   return;
+      // }
       setErrorForm(errorState);
-      navigate('/accountSuccess');
+      navigate('/team/details');
       window.localStorage.setItem('key', 'sampleToken');
       //create account endpoint
     } else {
@@ -136,7 +136,7 @@ const MiniCart = (props) => {
           <span className={styles.taxNotes}>
             Taxes and shipping will be calculated at checkout
           </span>
-          <Button onClick={() => navigate('/cart')} level={'primary'} fullWidth>
+          <Button onClick={handleSubmit} level={'primary'} fullWidth>
             checkout
           </Button>
         </div>

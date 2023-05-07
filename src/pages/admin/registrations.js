@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './orders.module.css';
+import * as styles from './registrations.module.css';
 
 import AccountLayout from '../../components/AccountLayout/AccountLayout';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -7,6 +7,7 @@ import Layout from '../../components/Layout/Layout';
 import OrderItem from '../../components/OrderItem/OrderItem';
 import { isAuth } from '../../helpers/general';
 import { navigate } from 'gatsby';
+import Button from '../../components/Button/Button';
 
 const OrderPage = (props) => {
   if (isAuth() === false) {
@@ -83,23 +84,20 @@ const OrderPage = (props) => {
   return (
     <Layout>
       <AccountLayout>
-        <Breadcrumbs
-          crumbs={[
-            { link: '/', label: 'Home' },
-            { link: '/account', label: 'Account' },
-            { link: '/account/orders/', label: 'Orders' },
-          ]}
-        />
-        <h1>Orders</h1>
+        <h1>Registrations</h1>
         <div className={`${styles.tableHeaderContainer} ${styles.gridStyle}`}>
-          <span className={styles.tableHeader}>Order #</span>
-          <span className={styles.tableHeader}>Order Placed</span>
-          <span className={styles.tableHeader}>Last Update</span>
+          <span className={styles.tableHeader}>Registration #</span>
+          <span className={styles.tableHeader}>Created on</span>
+          <span className={styles.tableHeader}>Last update</span>
           <span className={styles.tableHeader}>Status</span>
         </div>
 
         <OrderItem order={sampleOrder1} headerStyling={styles.gridStyle} />
         <OrderItem order={sampleOrder2} headerStyling={styles.gridStyle} />
+
+        <Button onClick={() => console.log('Download')} level={'primary'}>
+          Download
+          </Button>
       </AccountLayout>
     </Layout>
   );
