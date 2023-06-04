@@ -68,7 +68,7 @@ const MiniCart = (props) => {
       //   return;
       // }
       setErrorForm(errorState);
-      navigate('/team/details');
+      navigate('/orderConfirm');
       window.localStorage.setItem('key', 'sampleToken');
       //create account endpoint
     } else {
@@ -133,7 +133,7 @@ const MiniCart = (props) => {
             </span>
           </div>
           <span className={styles.taxNotes}>
-            Taxes and shipping will be calculated at checkout
+            You can update your team details once you have successfully registered.
           </span>
           <Button onClick={handleSubmit} level={'primary'} fullWidth>
             checkout
