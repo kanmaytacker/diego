@@ -1,47 +1,31 @@
-import React, { useState, useEffect } from 'react';
 import { navigate } from 'gatsby';
+import React, { useEffect, useState } from 'react';
 import * as styles from './support.module.css';
 
 import Banner from '../components/Banner';
-import Contact from '../components/Contact';
-import Layout from '../components/Layout/Layout';
-import ThemeLink from '../components/ThemeLink';
-import Policy from '../components/Policy';
 import Container from '../components/Container';
+import Layout from '../components/Layout/Layout';
+import Policy from '../components/Policy';
+import ThemeLink from '../components/ThemeLink';
+import Terms from '../components/Terms';
 
 const SupportPage = (props) => {
   const subpages = [
-    { title: 'Shipping', key: 'shipping' },
-    { title: 'Returns', key: 'returns' },
-    { title: 'Payments & Security', key: 'payments' },
     { title: 'Terms & Conditions', key: 'terms' },
-    { title: 'Contact Us', key: 'contact' },
     { title: 'Privacy Policy', key: 'policy' },
   ];
 
-  const [current, setCurrent] = useState(subpages[4]);
+  const [current, setCurrent] = useState(subpages[0]);
 
   const renderElement = (key) => {
     let tempElement = <React.Fragment />;
 
     switch (key) {
-      case 'contact':
-        tempElement = <Contact />;
-        break;
       case 'policy':
         tempElement = <Policy />;
         break;
-      case 'shipping':
-        tempElement = <Policy />;
-        break;
-      case 'returns':
-        tempElement = <Policy />;
-        break;
-      case 'payments':
-        tempElement = <Policy />;
-        break;
       case 'terms':
-        tempElement = <Policy />;
+        tempElement = <Terms />;
         break;
       default:
         break;
@@ -72,7 +56,7 @@ const SupportPage = (props) => {
         <Banner
           maxWidth={'650px'}
           name={current.title}
-          bgImage={'/support.png'}
+          bgImage={'/banner1.png'}
           color={'var(--standard-white)'}
           height={'350px'}
         />
