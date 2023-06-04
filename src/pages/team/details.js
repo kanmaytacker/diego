@@ -40,9 +40,7 @@ const SettingsPage = (props) => {
   const [error, setError] = useState(errorState);
 
   const {
-    supabaseTeam: {
-      name: teamName,
-    }
+    supabaseTeam: { name: teamName },
   } = useStaticQuery(graphql`
     query {
       supabaseTeam {
@@ -54,9 +52,9 @@ const SettingsPage = (props) => {
   useEffect(() => {
     setUpdateForm({
       ...updateForm,
-      teamName,
+      teamName: teamName,
     });
-  }, [updateForm, teamName]);
+  }, [setUpdateForm, teamName]);
 
   const handleChange = (id, e) => {
     const tempForm = { ...updateForm, [id]: e };
@@ -134,11 +132,10 @@ const SettingsPage = (props) => {
                 type={'input'}
                 labelName={'Last Name'}
               />
-
             </div>{' '}
           </form>
           <Button onClick={() => console.log('Download')} level={'primary'}>
-          Save
+            Save
           </Button>
         </div>
       </AccountLayout>

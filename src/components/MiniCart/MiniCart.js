@@ -57,7 +57,6 @@ const MiniCart = (props) => {
     //   validForm = false;
     // }
 
-    console.log('validForm', validForm);
     if (validForm === true) {
       
       // const { data, error } = await supabase.from('team').insert([{

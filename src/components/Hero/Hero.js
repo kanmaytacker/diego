@@ -1,41 +1,23 @@
 import React from 'react';
+import LottieAnimation from '../Animation';
+import HeroAnimation from '../../assets/LandingAnimation.json';
+import Button from '../Button/Button';
 import * as styles from './Hero.module.css';
-import Button from '../Button';
-import { Link } from 'gatsby';
 
-const Hero = (props) => {
-  const {
-    title,
-    subtitle,
-    ctaText,
-    ctaAction,
-    image,
-    maxWidth,
-    ctaStyle,
-    ctaLink,
-    ctaTo,
-    header,
-  } = props;
+const Hero = () => {
   return (
-    <div className={styles.root} style={{ backgroundImage: `url(${image})` }}>
-      <div className={styles.content} style={{ maxWidth: maxWidth }}>
-        {header && <span className={styles.header}>{header}</span>}
-        {title && <h2 className={styles.title}>{title}</h2>}
-        {subtitle && <span className={styles.subtitle}>{subtitle}</span>}
-        {ctaText && (
-          <Button
-            className={`${styles.ctaButton} ${ctaStyle}`}
-            level={'primary'}
-            onClick={ctaAction}
-          >
-            {ctaText}
+    <div>
+      <div className={styles.textContainer}>
+        <h1>Join competitions near you</h1>
+        <p>Discover hidden gems and win prizes</p>
+        <div>
+          <Button level="primary" disabled>
+            Coming soon.
           </Button>
-        )}
-        {ctaLink && (
-          <Link className={styles.ctaLink} to={ctaTo}>
-            {ctaLink}
-          </Link>
-        )}
+        </div>
+      </div>
+      <div className={styles.hero}>
+        <LottieAnimation lotti={HeroAnimation} />
       </div>
     </div>
   );
