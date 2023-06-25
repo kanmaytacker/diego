@@ -32,10 +32,10 @@ const OrderItem = (props) => {
         onClick={() => setCollapsed(!collapsed)}
       >
         <div className={styles.orderMeta}>
-          <span className={styles.orderId}>Order #{pad(order.id, 5)}</span>
+          <span className={styles.orderId}>Team - {pad(order.id, 5)}</span>
           <span
             className={styles.orderTotalMeta}
-          >{`${order.items.length} products totaling `}</span>
+          >{`${order.items.length} team members`}</span>
           <span className={styles.total}>
             <CurrencyFormatter amount={computedTotal}></CurrencyFormatter>
           </span>

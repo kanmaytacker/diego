@@ -4,11 +4,8 @@ import * as styles from './AddressCard.module.css';
 const AddressCard = (props) => {
   const {
     name,
-    address,
-    state,
-    postal,
-    country,
-    company,
+    isCaptain,
+    email,
     showForm,
     showDeleteForm,
   } = props;
@@ -16,10 +13,8 @@ const AddressCard = (props) => {
   return (
     <div className={`${styles.root}`}>
       <span className={styles.name}>{name}</span>
-      <span>{company}</span>
-      <span>{address}</span>
-      <span>{`${state} ${postal}`}</span>
-      <span>{country}</span>
+      {email ? <span>{email}</span> : null}
+      {isCaptain ? <span>Captain</span> : null}
       <div className={styles.actionContainer}>
         <span role={'presentation'} onClick={showForm}>
           Edit

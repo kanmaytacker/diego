@@ -50,9 +50,6 @@ const ForgotPage = (props) => {
           </div>
         </form>
       </div>
-      <div className={styles.gridContainer}>
-        <AttributeGrid />
-      </div>
     </Layout>
   );
 };

@@ -5,99 +5,201 @@ const Policy = (props) => {
   return (
     <div className={styles.root}>
       <div className={styles.section}>
-        <h3>1. Lorem Ipsum</h3>
         <p>
-          Delaware limited liability company (The Sydney) collects personal
-          information that you voluntarily provide when applying or registering
-          for an account with The Upside or making a purchase on The Upside
-          website; www.theupside.com (the Website).
+          At Gurufa Games ("Platform", "we", "us", or "our"), we take your
+          privacy seriously and are committed to protecting your personal
+          information. This Privacy Policy explains how we collect, use,
+          disclose, and safeguard your information when you use our Platform,
+          which hosts competitions for skills like football, badminton, skating,
+          and other activities in India. By using the Platform, you agree to the
+          collection and use of your personal information in accordance with
+          this Privacy Policy.
         </p>
+        <h3>1. INFORMATION WE COLLECT</h3>
+        <h5>1.1 Personal Information</h5>
+        <br />
         <p>
-          This Privacy Policy (Privacy Policy) outlines how your information is
-          collected, used and disclosed when you access or use our Services as
-          defined in our Terms. This information is collected, used and
-          disclosed in accordance with the Privacy Act 1988 (Cth) (Privacy Act).{' '}
+          When you register for an account on the Platform, we may collect
+          personal information, such as:
+          <ol>
+            <li>Name</li>
+            <li>Email address</li>
+            <li>Phone number</li>
+            <li>Date of birth</li>
+            <li>Gender</li>
+            <li>Mailing address</li>
+            <li>Photographs</li>
+            <li>Team or individual affiliation</li>
+          </ol>
         </p>
+        <h5>1.2 Usage Information</h5>
+        <br />
         <p>
-          This Privacy Policy is incorporated by reference into our Terms. Any
-          capitalized terms not defined in this Policy are defined in the Terms.
-          You agree to comply with all Terms when accessing or using our
-          Services, including this Privacy Policy.
+          We may automatically collect information about your use of the
+          Platform, such as:
+          <ol>
+            <li>IP address</li>
+            <li>
+              Device information, including device type, operating system, and
+              browser type
+            </li>
+            <li>
+              Log information, such as your search queries, page views, and
+              access times
+            </li>
+            <li>
+              Location information, derived from your IP address or GPS (if
+              enabled)
+            </li>
+          </ol>
+        </p>
+        <h5>1.3 Cookies and Other Tracking Technologies </h5>
+        <br />
+        <p>
+          We use cookies and similar technologies to collect information about
+          your use of the Platform and to provide personalized experiences. You
+          can control the use of cookies through your browser settings.
         </p>
       </div>
 
       <div className={styles.section}>
-        <h3>2. Lorem Ipsum</h3>
+        <h3>2. HOW WE USE YOUR INFORMATION</h3>
+
         <p>
-          Our Services, including but not limited to the registration of an
-          account with us or placing of an order, is not intended to be used by
-          children under the age of 13. When a visitor indicates an age under
-          13, the registration process for The Upside website cannot be
-          completed, and no personally identifying information is collected in
-          conjunction with that attempted submission except that we retain
-          e-mail addresses of such persons (and record of access attempts) for
-          purposes of denying registration. Otherwise, we do not knowingly
-          collect personally identifiable information from visitors under the
-          age of 13.
-        </p>
-        <p>
-          If you are under 18, any use of our Services must be with the
-          involvement of a parent or guardian. By accessing or using our
-          Website, you warrant and represent to us that you are over the age of
-          18 years and you have the right, authority and legal capacity to enter
-          into a legally binding agreement and to abide by this Privacy Policy.{' '}
-        </p>
-        <p>
-          The Upside collects, uses and discloses information regarding users
-          aged 13-18 in the same manner as it does for adults.{' '}
+          We may use your information for various purposes, including to:
+          <ol>
+            <li>Provide and maintain the Platform and its services</li>
+            <li>Register and manage your account</li>
+            <li>Administer and organize competitions</li>
+            <li>Send you updates, promotions, and marketing materials</li>
+            <li>Respond to your inquiries and provide customer support</li>
+            <li>
+              Analyze and improve the Platform's performance and user experience
+            </li>
+            <li>
+              Comply with legal requirements and prevent fraud or other
+              malicious activity
+            </li>
+          </ol>
         </p>
       </div>
 
       <div className={styles.section}>
-        <h3>3. Lorem Ipsum</h3>
+        <h3>3. HOW WE SHARE YOUR INFORMATION</h3>
         <p>
-          You must only use our Services in accordance with this Privacy Policy
-          and any applicable law or regulations. You agree to refrain from
-          undertaking any prohibited acts as set out in this Clause 3. You must
-          not (or attempt to):{' '}
+          We may share your information with third parties in the following
+          situations:
+          <ol>
+            <li>With your consent or at your direction</li>
+            <li>
+              With competition organizers, sponsors, or other participants, as
+              necessary for the administration and promotion of competitions
+            </li>
+            <li>
+              With our service providers, who process your information on our
+              behalf and are contractually obligated to protect your information
+            </li>
+            <li>
+              In response to a legal request, such as a subpoena or court order
+            </li>
+            <li>
+              In connection with a merger, acquisition, or sale of assets,
+              subject to the receiving party's adherence to a comparable privacy
+              policy
+            </li>
+            <li>
+              To protect the rights, property, or safety of the Platform, its
+              users, or the public
+            </li>
+          </ol>
         </p>
+      </div>
+      <div className={styles.section}>
+        <h3>4. YOUR RIGHTS AND CHOICES</h3>
+        <h5>4.1 Access, Correction, and Deletion</h5>
+        <br />
         <p>
-          (a) interfere with or disrupt the use of Services or the website, in
-          any manner including but not limited to the servicers or networks that
-          host the website;{' '}
+          You have the right to access, correct, or delete your personal
+          information held by the Platform. To exercise these rights, please
+          contact us at contact@gurufa.com.
         </p>
-        <p>(b) stalk, harass, threaten, intimidate or harm another; </p>
+        <h5>4.2 Communications Preferences</h5>
+        <br />
         <p>
-          (c) pretend to be anyone, or any entity, you are not, you will not
-          impersonate or misrepresent yourself as another person (including
-          celebrities), entity, a The Upside employee, or a civic or government
-          leader, or otherwise misrepresent your affiliation with a person or
-          entity. The Upside reserves the right to reject or block any user
-          which could be deemed to be an impersonation or misrepresentation of
-          your identity, or a misappropriation of another person's name or
-          identity;{' '}
+          You may opt out of receiving promotional emails from the Platform by
+          following the unsubscribe instructions in those emails. Please note
+          that you may still receive service-related communications, such as
+          account updates or competition notifications.
         </p>
+      </div>
+      <div className={styles.section}>
+        <h3>5. SECURITY</h3>
         <p>
-          (d) engage in any copyright infringement or other intellectual
-          property infringement, or disclose any trade secret or confidential
-          information in violation of a confidentiality, employment, or
-          non-disclosure agreement or otherwise;{' '}
+          We take reasonable measures to protect your information from
+          unauthorized access, alteration, disclosure, or destruction. However,
+          no method of transmission or storage is 100% secure, and we cannot
+          guarantee the absolute security of your information.
         </p>
+      </div>
+      <div className={styles.section}>
+        <h3>6. CHILDREN'S PRIVACY</h3>
         <p>
-          (e) use, distribute, reproduce or commercialize any content from the
-          Website or The Upside service except as permitted by this Policy, by
-          law, and with prior written agreement from The Upside;{' '}
+          The Platform is not intended for use by children under the age of 13.
+          We do not knowingly collect personal information from children under
+          the age of 13. If we become aware that we have collected personal
+          information from a child under the age of 13, we will take steps to
+          delete such information.
         </p>
+      </div>
+      <div className={styles.section}>
+        <h3>7. THIRD-PARTY LINKS</h3>
         <p>
-          (f) transmit any unsolicited advertising, promotional material or
-          other forms of solicitation in connection with your use of the Service
-          without the prior written agreement of The Upside;{' '}
+          The Platform may contain links to third-party websites, services, or
+          applications that are not affiliated with or controlled by us. We are
+          not responsible for the privacy practices or the content of these
+          third-party websites, services, or applications. We encourage you to
+          review the privacy policies of any third-party websites, services, or
+          applications that you access through the Platform.
         </p>
+      </div>
+      <div className={styles.section}>
+        <h3>8. INTERNATIONAL DATA TRANSFERS</h3>
         <p>
-          (g) forge any TCP-IP packet header or any part of the header
-          information or otherwise putting Information in a header designed to
-          mislead recipients as to the origin of any content transmitted through
-          the Website ("spoofing";);
+          Although the Platform primarily operates in India, we may transfer
+          your personal information to countries outside of India for
+          processing, storage, or other purposes. By using the Platform, you
+          consent to the transfer of your personal information to countries that
+          may have different data protection laws than those in your country of
+          residence.
+        </p>
+      </div>
+      <div className={styles.section}>
+        <h3>9. CHANGES TO THIS PRIVACY POLICY</h3>
+        <p>
+          We reserve the right to update or modify this Privacy Policy at any
+          time, in our sole discretion. Any changes to this Privacy Policy will
+          be posted on the Platform, and the "Last Updated" date at the top of
+          this Privacy Policy will be revised. Your continued use of the
+          Platform following the posting of any changes constitutes acceptance
+          of those changes. It is your responsibility to review this Privacy
+          Policy regularly to stay informed about any updates or modifications.
+        </p>
+      </div>
+      <div className={styles.section}>
+        <h3>10. CONTACT US</h3>
+        <p>
+          If you have any questions or concerns about this Privacy Policy or our
+          privacy practices, please contact us at:
+          <br />
+          <br />
+          Gurufa Games <br />
+          Block CG, No.34, Sector 2, Salt Lake City, Kolkata - 700091, West
+          Bengal <br />
+          Email: contact@gurufa.com
+          <br />
+          <br />
+          By using the Platform, you represent and warrant that you have read
+          and understood, and agree to be bound by, this Privacy Policy.
         </p>
       </div>
     </div>

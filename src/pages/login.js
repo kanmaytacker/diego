@@ -125,10 +125,6 @@ const LoginPage = (props) => {
             </Button>
           </form>
         </div>
-
-        <div className={styles.attributeGridContainer}>
-          <AttributeGrid />
-        </div>
       </div>
     </Layout>
   );

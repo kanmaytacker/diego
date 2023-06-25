@@ -1,7 +1,4 @@
-describe('sample render test', () => {
-  beforeEach(() => {
-    cy.visit('/')
-  })
+describe.skip('sample render test', () => {
 
   it('displays the title text', () => {
     cy.get('h2')

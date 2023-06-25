@@ -31,21 +31,21 @@ const Contact = (props) => {
         <h4>Send Us A Message</h4>
         <p>
           Our Customer Service team are here for all enquiries Monday to Friday,
-          9am - 5pm AEDT (Australian Eastern Daylight Savings Time).
+          9am - 5pm IST.
         </p>
         <p>We look forward to hearing from you.</p>
       </div>
 
       <div className={styles.section}>
         <h4>Phone</h4>
-        <p>+1 424 280 4971</p>
-        <p>Monday to Friday - 9am - 5pm AEDT</p>
+        <p>+91 76194 55730</p>
+        <p>Monday to Friday - 9am - 5pm IST</p>
       </div>
 
       <div className={styles.section}>
         <h4>Email</h4>
         <p>
-          You can email our Customer Service team at customerservice@example.com
+          You can email our Customer Service team at contact@gurufa.com
           or via the contact form below:
         </p>
       </div>

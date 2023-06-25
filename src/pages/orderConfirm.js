@@ -17,32 +17,18 @@ const OrderConfirmPage = (props) => {
           </p>
           <div className={styles.actionContainer}>
             <ActionCard
-              title={'Order Status'}
-              icon={'delivery'}
-              subtitle={'Check your order status'}
-              link={'/account/orders'}
+              title='Team details'
+              icon={'user'}
+              subtitle='Update your team details'
+              link='/team/details'
               size={'lg'}
             />
 
             <ActionCard
-              title={'Shop'}
-              icon={'bag'}
-              subtitle={'Continue Shopping'}
-              link={'/shop'}
-            />
-
-            <ActionCard
-              title={'FAQs'}
-              icon={'question'}
-              subtitle={'Check out FAQs page'}
-              link={'/faq'}
-            />
-
-            <ActionCard
-              title={'Contact Us'}
-              icon={'phone'}
-              subtitle={'Reach out to us'}
-              link={'/support#contact'}
+              title='Player details'
+              icon={'plus'}
+              subtitle='Add the players to your team'
+              link={'/team/players'}
             />
           </div>
         </div>

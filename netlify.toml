@@ -14,3 +14,9 @@
 
   [plugins.inputs]
     enable = false
+
+[[redirects]]
+  from = "/"
+  to = "/tournament/sample"
+  status = 200
+

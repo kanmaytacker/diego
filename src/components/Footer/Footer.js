@@ -1,13 +1,11 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
 
+import Config from '../../config.json';
 import Accordion from '../Accordion';
 import Container from '../Container';
-import Dropdown from '../Dropdown/Dropdown';
 import FormInputField from '../FormInputField/FormInputField';
 import Icon from '../Icons/Icon';
-import Button from '../Button';
-import Config from '../../config.json';
 import * as styles from './Footer.module.css';
 
 const Footer = (prop) => {
@@ -69,10 +67,10 @@ const Footer = (prop) => {
             })}
             <div className={styles.newsLetter}>
               <div className={styles.newsLetterContent}>
-                <span className={styles.linkTitle}>Newsletter</span>
+                <span className={styles.linkTitle}>Waiting list</span>
                 <p className={styles.promoMessage}>
-                  Get 15% off your first purchase! Plus, be the first to know
-                  about sales, new product launches and exclusive offers!
+                  Sign up to our waiting list to be the first to know when we
+                  launch!
                 </p>
                 <form
                   className={styles.newsLetterForm}
@@ -132,54 +130,6 @@ const Footer = (prop) => {
           </div>
         </div>
       </Container>
-      <div className={styles.contentBottomContainer}>
-        <Container size={'large'} spacing={'min'}>
-          <div className={styles.contentBottom}>
-            <div className={styles.settings}>
-              <Dropdown
-                label={'Country/Region'}
-                optionList={Config.currencyList}
-              />
-              <Dropdown label={'Language'} optionList={Config.languageList} />
-            </div>
-            <div className={styles.copyrightContainer}>
-              <div className={styles.creditCardContainer}>
-                {Config.paymentOptions.amex && (
-                  <img
-                    className={styles.amexSize}
-                    src={'/amex.png'}
-                    alt={'amex'}
-                  ></img>
-                )}
-                {Config.paymentOptions.mastercard && (
-                  <img
-                    className={styles.masterSize}
-                    src={'/master.png'}
-                    alt={'mastercard'}
-                  ></img>
-                )}
-                {Config.paymentOptions.visa && (
-                  <img
-                    className={styles.visaSize}
-                    src={'/visa.png'}
-                    alt={'visa'}
-                  ></img>
-                )}
-              </div>
-              <span>
-                {new Date().getFullYear()} (c) . Built by{' '}
-                <Button target={true} href="https://www.matterdesign.com.au/">
-                  Matter.
-                </Button>{' '}
-                Powered by{' '}
-                <Button target={true} href="https://jamm.matter.design/">
-                  JAMM.™
-                </Button>
-              </span>
-            </div>
-          </div>
-        </Container>
-      </div>
     </div>
   );
 };

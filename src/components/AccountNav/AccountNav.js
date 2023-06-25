@@ -13,39 +13,32 @@ const AccountNav = (props) => {
       <div className={styles.webRoot}>
         <Link
           activeClassName={styles.activeLink}
-          to={'/account/orders/'}
+          to={'/team/details'}
           className={styles.webLink}
         >
-          Orders
+          Team Details
         </Link>
         <Link
           activeClassName={styles.activeLink}
-          to={'/account/address/'}
+          to={'/team/players'}
           className={styles.webLink}
         >
-          Addresses
+          Players
         </Link>
         <Link
           activeClassName={styles.activeLink}
-          to={'/account/settings/'}
+          to={'/account/password'}
           className={styles.webLink}
         >
-          Settings
+          Password
         </Link>
         <Link
           activeClassName={styles.activeLink}
-          to={'/account/viewed/'}
+          to={'/admin/registrations'}
           className={styles.webLink}
         >
-          Recently Viewed
+          Registrations
         </Link>
-        <span
-          role={'presentation'}
-          onClick={handleLogout}
-          className={styles.webLink}
-        >
-          Logout
-        </span>
       </div>
     </div>
   );

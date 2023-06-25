@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
 import { navigate } from 'gatsby';
-import * as styles from './settings.module.css';
+import React, { useState } from 'react';
+import * as styles from './password.module.css';
 
 import AccountLayout from '../../components/AccountLayout';
 import Button from '../../components/Button';
-import Breadcrumbs from '../../components/Breadcrumbs';
 import FormInputField from '../../components/FormInputField';
 import Layout from '../../components/Layout/Layout';
 
 import {
-  validateEmail,
-  validateStrongPassword,
   isAuth,
+  validateStrongPassword
 } from '../../helpers/general';
 
 const SettingsPage = (props) => {
@@ -20,17 +18,11 @@ const SettingsPage = (props) => {
   }
 
   const initialState = {
-    firstName: '',
-    lastName: '',
-    email: '',
     password: '',
     confirmPassword: '',
   };
 
   const errorState = {
-    firstName: '',
-    lastName: '',
-    email: '',
     password: '',
     confirmPassword: '',
   };
@@ -47,14 +39,6 @@ const SettingsPage = (props) => {
     e.preventDefault();
     let validForm = true;
     const tempError = { ...errorState };
-
-    if (updateForm.email !== '') {
-      if (validateEmail(updateForm.email) !== true) {
-        validForm = false;
-        tempError.email =
-          'Please use a valid email address, such as user@example.com.';
-      }
-    }
 
     if (updateForm.password !== '') {
       if (validateStrongPassword(updateForm.password) === false) {
@@ -81,40 +65,9 @@ const SettingsPage = (props) => {
   return (
     <Layout>
       <AccountLayout>
-        <Breadcrumbs
-          crumbs={[
-            { link: '/', label: 'Home' },
-            { link: '/account', label: 'Account' },
-            { link: '/account/settings', label: 'Settings' },
-          ]}
-        />
-        <h1>Settings</h1>
+        <h1>Team Details</h1>
         <div>
           <form onSubmit={(e) => handleSubmit(e)} noValidate>
-            <div className={styles.nameSection}>
-              <FormInputField
-                id={'firstName'}
-                value={updateForm.firstName}
-                handleChange={(id, e) => handleChange(id, e)}
-                type={'input'}
-                labelName={'First Name'}
-              />
-              <FormInputField
-                id={'lastName'}
-                value={updateForm.lastName}
-                handleChange={(id, e) => handleChange(id, e)}
-                type={'input'}
-                labelName={'Last Name'}
-              />
-              <FormInputField
-                id={'email'}
-                value={updateForm.email}
-                handleChange={(id, e) => handleChange(id, e)}
-                type={'email'}
-                labelName={'Email'}
-                error={error.email}
-              />
-            </div>
             <div className={styles.passwordContainer}>
               <h2>Change Password</h2>
               <div className={styles.passwordSection}>
