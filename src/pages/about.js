@@ -7,9 +7,9 @@ import Layout from '../components/Layout/Layout';
 
 import * as styles from './about.module.css';
 const AboutPage = (props) => {
-  let historyRef = useRef();
-  let valuesRef = useRef();
-  let sustainabilityRef = useRef();
+  let gurufaRef = useRef();
+  let gamesRef = useRef();
+  let kidsRef = useRef();
 
   const handleScroll = (elementReference) => {
     if (elementReference) {
@@ -23,103 +23,124 @@ const AboutPage = (props) => {
   return (
     <Layout disablePaddingBottom>
       <div className={styles.root}>
-        {/* Hero Container */}
-        <Hero
-          maxWidth={'900px'}
-          image={'/about.png'}
-          title={`Sydney \n A British brand since 1860`}
-        />
-
         <div className={styles.navContainer}>
-          <ThemeLink onClick={() => handleScroll(historyRef)} to={'#history'}>
-            History
+          <ThemeLink onClick={() => handleScroll(gurufaRef)} to={'#gurufa'}>
+            Gurufa
           </ThemeLink>
-          <ThemeLink onClick={() => handleScroll(valuesRef)} to={'#values'}>
-            Values
+          <ThemeLink onClick={() => handleScroll(kidsRef)} to={'#kids'}>
+            Gurufa Kids
           </ThemeLink>
           <ThemeLink
-            onClick={() => handleScroll(sustainabilityRef)}
-            to={'#sustainability'}
+            onClick={() => handleScroll(gamesRef)}
+            to={'#games'}
           >
-            Sustainability
+            Gurufa Games
           </ThemeLink>
         </div>
 
         <Container size={'large'} spacing={'min'}>
-          <div className={styles.detailContainer} ref={historyRef}>
+          <div className={styles.detailContainer} ref={gurufaRef}>
             <p>
-              Founded in 1860, Sydney is an innovative British brand with a
-              contemporary edge. We make timeless everyday luxury clothing.
-            </p>
-            <br />
-            <br />
-            <p>
-              We created some of the world's first T-shirts and spent decades
-              perfecting the feel of the cotton. Today we are the only brand
-              that makes T-shirts in its own factory in the UK. And we do this
-              in the same factory we have occupied since 1937.
+              Gurufa is on a mission to revolutionize education from first
+              principles, fostering a new approach that empowers children to
+              thrive in a rapidly changing world.
+              
+              <br />
+              <br />
+              With a commitment to holistic development and practical learning experiences, Gurufa offers two
+              innovative platforms: Gurufa Kids and Gurufa Games.
             </p>
           </div>
         </Container>
 
         <div className={styles.imageContainer}>
-          <img alt={'shirt brand'} src={'/about1.png'}></img>
+          <img alt={'shirt brand'} src={'/banner1.png'}></img>
         </div>
 
         <Container size={'large'} spacing={'min'}>
           <div className={styles.content}>
-            <h3>Our Values</h3>
-            <div ref={valuesRef}>
+            <h3>Gurufa Kids</h3>
+            <div ref={kidsRef}>
               <p>
-                Sunspel produced some of the world's earliest T-shirts. In the
-                late 1800s the business made luxury tunics and undershirts from
-                lightweight Sea Island cotton for export to the Far East and
-                other warm climates. While these garments initially had silk
-                buttoned plackets, these were removed in the early 1900s and
-                replaced with simple bound necks to reduce manufacturing costs -
-                creating the T-shirt. We've supplied the world as the T-shirt
-                has evolved from underwear to outerwear, from symbol of youthful
-                rebellion to everyday wardrobe staple, and we've spent decades
-                refining its every last aspect.
+                Gurufa Kids is a platform dedicated to providing children aged
+                5-16 with a comprehensive range of extra-curricular courses. We
+                understand the challenges faced by parents who seek to cultivate
+                their child's overall growth, both physically and cognitively.
+                That's why we have carefully curated a diverse selection of
+                courses, including Rubik's Cube, Vedic Maths, Abacus and Yoga.
+                We are already working on other skills like Aptitude,
+                Fundamentals of Coding, Basics of Finance, Football, Skating,
+                and many more. These courses are designed to inspire curiosity,
+                foster creativity, and nurture a love for learning in children.
               </p>
+              <h4>How We Make a Difference?</h4>
               <ol>
-                <li>Be an ecowear</li>
-                <li>Sophisticated and not mass-produced</li>
-                <li>Only natural materials</li>
+                <li>
+                  <em>Holistic Development</em>: Traditional education systems
+                  often overlook the holistic development of children, focusing
+                  solely on academics. Gurufa Kids addresses this challenge by
+                  offering a wide range of courses that cater to various
+                  interests and talents. Through our platform, parents can
+                  provide their children with opportunities to explore diverse
+                  fields and develop well-rounded skills.
+                </li>
+                <li>
+                  <em>Engaging Learning Experience</em>: We understand the
+                  importance of active engagement in the learning process.
+                  Gurufa Kids courses are designed to provide interactive and
+                  experiential learning experiences. By engaging in practical
+                  activities and hands-on projects, children can apply their
+                  knowledge and develop critical thinking, problem-solving, and
+                  collaboration skills
+                </li>
               </ol>
-              <img alt={'founder'} src={'/about2.png'}></img>
             </div>
-            <h3>Sustainability</h3>
-            <div id={'#sustainability'} ref={sustainabilityRef}>
+            <h3>Gurufa Games</h3>
+            <div id={'#sustainability'} ref={gamesRef}>
               <p>
-                Our founder, Thomas Hill, had both an eye for quality and a
-                desire to innovate. As well as using the finest fibres such as
-                Sea Island cotton, cashmere and silk, he invented his own
-                fabrics. Sunspel continues this commitment to innovation today
-                and our unique fabrics include: Q100 Sea Island cotton, Q82
-                Supima cotton, Q75 warp knit mesh cotton and Q14 warp knit
-                cellular cotton. The technology behind these fabrics remains
-                unchanged today and all Sunspel products use the finest cottons,
-                wools and fibres.
+                Gurufa Games is a platform where children, or their parents on
+                their behalf, can enroll as participants in a series of exciting
+                and educational competitions. Our competitions aim to provide a
+                consistent and fair stream of opportunities for children to
+                showcase their talents, gauge their growth, and discover their
+                true passions and interests.
               </p>
+              <h4>How We Make a Difference?</h4>
+              <ol>
+                <li>
+                  <em>Practical Application of Skills</em>: The conventional
+                  examination-based evaluation methods often fail to capture a
+                  child's true potential and practical skills. Gurufa Games
+                  offers a unique solution by organizing regular competitions
+                  where children can put their knowledge and abilities into
+                  practice. These competitions allow them to demonstrate their
+                  skills in a practical setting, fostering confidence and
+                  encouraging further exploration.
+                </li>
+                <li>
+                  <em>Inclusive Education</em>: Our goal is to democratize
+                  education and create an inclusive learning environment. Gurufa
+                  Games provides equal opportunities for all participants,
+                  irrespective of their background or academic performance. By
+                  focusing on practical skills and talent, we empower children
+                  to discover their unique strengths and passions.
+                </li>
+              </ol>
               <p>
-                Made in Long Eaton, England and crafted from our luxurious long
-                staple Supima cotton for unparalleled softness, comfort and
-                durability, the Sunspel T-shirt has a classic fit and only the
-                most essential details.{' '}
-              </p>
-              <p>
-                With over 100 years spent perfecting fabric, fit and style, the
-                Sunspel Classic T-shirt is recognised as the finest in the
-                world.
+                At Gurufa, we believe in the power of education to transform
+                lives. By building an ecosystem of learning and competing
+                opportunities with Gurufa Kids and Gurufa Games, we strive to
+                provide a holistic, practical, and engaging educational
+                experience that nurtures each child's full potential.
+                <br />
+                <br />
+                Join us on
+                this exciting journey of education reform and empower your child
+                to succeed in a dynamic and ever-evolving world!
               </p>
             </div>
           </div>
         </Container>
-
-        <div className={styles.imageContainer}>
-          <img alt={'shirt backwards'} src={'/about3.png'}></img>
-        </div>
       </div>
     </Layout>
   );

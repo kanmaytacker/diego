@@ -8,11 +8,13 @@ import Layout from '../components/Layout/Layout';
 import Policy from '../components/Policy';
 import ThemeLink from '../components/ThemeLink';
 import Terms from '../components/Terms';
+import Contact from '../components/Contact';
 
 const SupportPage = (props) => {
   const subpages = [
     { title: 'Terms & Conditions', key: 'terms' },
     { title: 'Privacy Policy', key: 'policy' },
+    { title: 'Contact Us', key: 'contact' },
   ];
 
   const [current, setCurrent] = useState(subpages[0]);
@@ -26,6 +28,9 @@ const SupportPage = (props) => {
         break;
       case 'terms':
         tempElement = <Terms />;
+        break;
+      case 'contact':
+        tempElement = <Contact />;
         break;
       default:
         break;

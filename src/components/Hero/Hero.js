@@ -11,8 +11,8 @@ const Hero = () => {
         <h1>Join competitions near you</h1>
         <p>Discover hidden gems and win prizes</p>
         <div>
-          <Button level="primary" disabled>
-            Coming soon.
+          <Button level="primary" href="/tournament/sample">
+            Register
           </Button>
         </div>
       </div>

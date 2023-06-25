@@ -27,6 +27,10 @@
       "subTitle": "Info",
       "links": [
         {
+          "text": "About Us",
+          "link": "/about"
+        },
+        {
           "text": "Privacy Policy",
           "link": "/support#policy"
         }
@@ -38,6 +42,10 @@
         {
           "text": "Terms & Conditions",
           "link": "/support#terms"
+        },
+        {
+          "text": "Contact Us",
+          "link": "/support#contact"
         }
       ]
     }
