@@ -9,12 +9,14 @@ import Policy from '../components/Policy';
 import ThemeLink from '../components/ThemeLink';
 import Terms from '../components/Terms';
 import Contact from '../components/Contact';
+import Refund from '../components/Refund';
 
 const SupportPage = (props) => {
   const subpages = [
     { title: 'Terms & Conditions', key: 'terms' },
     { title: 'Privacy Policy', key: 'policy' },
     { title: 'Contact Us', key: 'contact' },
+    { title: 'Refund & Cancellation Policy', key: 'refund' },
   ];
 
   const [current, setCurrent] = useState(subpages[0]);
@@ -32,6 +34,9 @@ const SupportPage = (props) => {
       case 'contact':
         tempElement = <Contact />;
         break;
+      case 'refund':
+          tempElement = <Refund />;
+          break;
       default:
         break;
     }
