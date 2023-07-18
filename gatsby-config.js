@@ -36,7 +36,7 @@ module.exports = {
           {
             type: 'Team',
             query: (client) => {
-              return client.from('team').select('id, phone, name, members');
+              return client.from('team').select('id, phone, name, players');
             }
           }
         ],
