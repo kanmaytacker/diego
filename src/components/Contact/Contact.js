@@ -37,6 +37,15 @@ const Contact = (props) => {
       </div>
 
       <div className={styles.section}>
+        <h4>Address</h4>
+        <p>GURUFA TECHNOLOGIES PRIVATE LIMITED</p>
+        <p>BLOCK CG, NO 34</p>
+        <p>SECTOR 2, SALT LAKE</p>
+        <p>Kolkata, West Bengal</p>
+        <p>India - 700091</p>
+      </div>
+
+      <div className={styles.section}>
         <h4>Phone</h4>
         <p>+91 76194 55730</p>
         <p>Monday to Friday - 9am - 5pm IST</p>
