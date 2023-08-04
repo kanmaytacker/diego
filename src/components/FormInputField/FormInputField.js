@@ -39,7 +39,7 @@ const FormInputField = React.forwardRef((props, ref) => {
           className={`${styles.input} ${
             icon ? styles.conditionalIconPadding : ''
           } ${error && error ? styles.fieldRequired : ''}`}
-          onChange={(e) => { console.log(e); handleChange(id, e.target.value)}}
+          onChange={(e) => handleChange(id, e.target.value)}
           disabled={disabled}
           ref={ref}
         />

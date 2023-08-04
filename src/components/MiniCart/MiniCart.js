@@ -30,7 +30,6 @@ const MiniCart = (props) => {
   const [errorForm, setErrorForm] = useState(errorState);
 
   const handleChange = (id, e) => {
-    console.log('id', e);
     const tempForm = { ...signupForm, [id]: e };
     setSignupForm(tempForm);
   };
@@ -98,20 +97,20 @@ const MiniCart = (props) => {
 
           <FormInputField
             id={'phone'}
-            value={signupForm.contactPhone}
+            value={signupForm.phone}
             handleChange={(id, e) => handleChange(id, e)}
             type={'input'}
             labelName={'Contact phone number'}
-            error={errorForm.contactPhone}
+            error={errorForm.phone}
           />
 
           <FormInputField
             id={'email'}
-            value={signupForm.contactEmail}
+            value={signupForm.email}
             handleChange={(id, e) => handleChange(id, e)}
             type={'email'}
             labelName={'Contact email'}
-            error={errorForm.contactEmail}
+            error={errorForm.email}
           />
           <FormInputField
             id={'contactName'}
