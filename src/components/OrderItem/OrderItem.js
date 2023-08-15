@@ -29,7 +29,6 @@ const OrderItem = (props) => {
       <div
         className={`${headerStyling} ${styles.orderHeader}`}
         role={'presentation'}
-        onClick={() => setCollapsed(!collapsed)}
       >
         <div className={styles.orderMeta}>
           <span className={styles.orderId}>Team - {pad(order.id, 5)}</span>

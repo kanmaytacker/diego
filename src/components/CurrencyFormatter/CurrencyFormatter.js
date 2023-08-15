@@ -4,7 +4,7 @@ import { isNumeric } from '../../helpers/general';
 
 const CurrencyFormatter = ({
   amount,
-  currency = 'USD',
+  currency = 'INR',
   appendZero = false,
   useDollar = false,
 }) => {
