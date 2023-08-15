@@ -14,10 +14,13 @@ const OrderPage = (props) => {
     navigate('/login');
   }
 
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const today  = new Date();
+  const date = today.toLocaleDateString("en-US", options);
   const sampleOrder1 = {
     id: '2',
-    orderPlaced: 'Oct 12, 2021',
-    lastUpdate: 'Oct 12, 2021',
+    orderPlaced: date,
+    lastUpdate: date,
     status: 'pending',
     items: [
       {
@@ -53,8 +56,8 @@ const OrderPage = (props) => {
 
   const sampleOrder2 = {
     id: '1',
-    orderPlaced: 'Oct 11, 2021',
-    lastUpdate: 'Oct 11, 2021',
+    orderPlaced: date,
+    lastUpdate: date,
     status: 'pending',
     items: [
       {
